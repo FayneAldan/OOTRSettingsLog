@@ -1,8 +1,55 @@
 <html>
-    <head>
-        <title>Hello world!</title>
-    </head>
-    <body>
-        <p>Just a temporary test to make sure GitHub Pages works fine.</p>
-    </body>
+  <head>
+    <title>OoT Settings Log</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <input type="file" id="fileUpload" hidden accept="application/json" />
+    <table>
+      <tr>
+        <td><label for="uploadBtn">Spoiler Log:</label></td>
+        <td><button id="uploadBtn">Upload</button></td>
+        <td><label id="spoilerName" for="uploadBtn">no_file.json</label></td>
+      </tr>
+      <tr>
+        <td><label for="downloadBtn">Settings Log:</label></td>
+        <td><button id="downloadBtn" disabled>Download</button></td>
+        <td>
+          <label id="settingsName" for="downloadBtn"
+            >no_file_Settings.json</label
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>Examples:</td>
+        <td colspan="2">
+          <button id="loadVanilla">vanilla</button>
+          <button id="loadMQ">MQvanilla</button>
+        </td>
+      </tr>
+    </table>
+    <div id="error"></div>
+    <details>
+      <summary>Spoiler Log</summary>
+      <textarea id="spoilerFile">{}</textarea>
+    </details>
+    <details>
+      <summary>Settings Log</summary>
+      <textarea id="settingsFile" readonly>{}</textarea>
+    </details>
+    <ul>
+      <li>
+        <a href="https://github.com/FayneAldan/OOTRSettingsLog">Source Code</a>
+      </li>
+      <li>
+        <a href="https://github.com/FayneAldan/OOTRSettingsLog/issues"
+          >Report an Issue</a
+        >
+      </li>
+    </ul>
+    <script src="examples/vanilla.js" async></script>
+    <script src="examples/MQvanilla.js" async></script>
+    <script src="script.js"></script>
+  </body>
 </html>
